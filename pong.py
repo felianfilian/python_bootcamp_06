@@ -1,6 +1,7 @@
 from turtle import Screen
 from pong_paddle import Paddle
 from pong_ball import Ball
+from pong_ui import PongUI
 import time
 
 def start():
@@ -13,6 +14,7 @@ def start():
     r_paddle = Paddle((350, 0))
     l_paddle = Paddle((-350, 0))
     ball = Ball()
+    ui = PongUI()
 
     screen.listen()
     screen.onkey(r_paddle.go_up, "Up")
@@ -27,7 +29,17 @@ def start():
         ball.move()
         # collision
         if ball.ycor() > 275 or ball.ycor() < -275:
-            ball.bounce()
+            ball.bounce_y()
+        # paddle collision
+        if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+            ball.bounce_x()
+        if ball.xcor() > 380:
+            ui.change_score(0)
+            ball.reset_position()
+        if ball.xcor() < -380:
+            ui.change_score(1)
+            ball.reset_position()
+
 
     screen.exitonclick()
 
