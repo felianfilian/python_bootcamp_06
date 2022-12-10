@@ -8,6 +8,8 @@ def start():
     screen.tracer(0)
 
     player = Player()
+    screen.listen()
+    screen.onkey(player.move_up, "w")
 
     game_active = True
     while game_active:
