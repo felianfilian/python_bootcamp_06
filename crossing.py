@@ -1,5 +1,6 @@
 from turtle import Screen
 from crossing_player import Player
+from crossing_cars import Cars
 import time
 
 def start():
@@ -8,6 +9,8 @@ def start():
     screen.tracer(0)
 
     player = Player()
+    car_manager = Cars()
+
     screen.listen()
     screen.onkey(player.move_up, "w")
 
@@ -15,3 +18,5 @@ def start():
     while game_active:
         time.sleep(0.1)
         screen.update()
+        car_manager.create_cars()
+
