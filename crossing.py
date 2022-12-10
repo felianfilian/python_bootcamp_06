@@ -26,4 +26,7 @@ def start():
             if car.distance(player) < 20:
                 game_active = False
 
-
+        # crodding successfull
+        if player.at_finish_line():
+            player.goto_start()
+            car_manager.level_up()
