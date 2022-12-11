@@ -26,6 +26,7 @@ def start():
         # car collision detection
         for car in car_manager.all_cars:
             if car.distance(player) < 20:
+                score.game_over()
                 game_active = False
 
         # crodding successfull
@@ -33,3 +34,5 @@ def start():
             player.goto_start()
             car_manager.level_up()
             score.increase_level()
+
+    screen.exitonclick()
