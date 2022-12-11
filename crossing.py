@@ -32,3 +32,4 @@ def start():
         if player.at_finish_line():
             player.goto_start()
             car_manager.level_up()
+            score.increase_level()
