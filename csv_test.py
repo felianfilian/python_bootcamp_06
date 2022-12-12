@@ -10,3 +10,5 @@ def start():
     data = pandas.read_csv("csv_data.csv")
     print(data)
     print(data["name"])
+    age_list = data["age"].to_list()
+    print(data["age"].max())
