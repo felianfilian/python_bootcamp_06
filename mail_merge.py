@@ -9,6 +9,5 @@ def start():
     for name in names:
         strip_name = name.strip()
         new_letter = letter.replace("[name]", strip_name)
-        print(new_letter)
-        # print(F"hello {names[name]}")
-
+        with open(f"./output/letter_for_{strip_name}.txt", mode="w") as completed:
+            completed.write(new_letter)
