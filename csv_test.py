@@ -9,4 +9,5 @@ def start():
 #             print(row[1])
     data = pandas.read_csv("csv_data.csv")
     age_list = data["age"].to_list()
-    print(data[data.age == 33])
+    the_age = data[data.age == 33]
+    print(the_age.name)
