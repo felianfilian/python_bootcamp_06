@@ -8,7 +8,5 @@ def start():
 #         for row in data:
 #             print(row[1])
     data = pandas.read_csv("csv_data.csv")
-    print(data)
-    print(data["name"])
     age_list = data["age"].to_list()
-    print(data["age"].max())
+    print(data[data.age == 33])
