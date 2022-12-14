@@ -29,10 +29,11 @@ def start():
             t.goto(int(state_data.x), int(state_data.y))
             t.write(answer_state)
         elif answer_state == "Exit":
-            missed_states = []
-            for state in all_states:
-                if state not in guessed_states:
-                    missed_states.append(state)
+            missed_states = [state for state in all_states if state not in guessed_states]
+            # missed_states = []
+            # for state in all_states:
+            #     if state not in guessed_states:
+            #         missed_states.append(state)
             new_data = pandas.DataFrame(missed_states)
             new_data.to_csv("./us_states/missed_states.csv")
             break
