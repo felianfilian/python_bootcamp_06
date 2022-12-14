@@ -1,8 +1,4 @@
-import pong
-import  crossing
-import mail_merge
-import csv_test
-import us_states_quiz
+from us_states import us_states_quiz
 
 # pong.start()
 # crossing.start()
