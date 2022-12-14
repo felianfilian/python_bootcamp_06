@@ -1,7 +1,7 @@
 
 def start():
     numbers = [1,1,2,3,5,8,13,21,34,55]
-    squared_nums = [n * n for n in numbers]
+    squared_nums = [n for n in numbers if n % 2 == 0]
 
     print(squared_nums)
 
