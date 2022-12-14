@@ -9,6 +9,6 @@ def start():
     screen.addshape(image)
     turtle.shape(image)
 
-    
-
-    screen.exitonclick()
+    answer_state = screen.textinput(title="Guess the state", prompt="Type a states name: ")
+    print(answer_state)
+    turtle.mainloop()
