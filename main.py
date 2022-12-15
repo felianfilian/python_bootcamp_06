@@ -12,7 +12,6 @@ import data_overlap
 # square_numbers.start()
 # data_overlap.start()
 
-text = "mario is the fastest"
-txt_list = text.split()
-txt_dic = {name:len(name) for name in txt_list}
-print(txt_dic)
+temps = {"Monday": 12, "Tuesday": 18, "Wednesday": 9}
+temp_far = {day:(temp*9/5)+32 for (day, temp) in temps.items()}
+print(temp_far)
