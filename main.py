@@ -14,5 +14,5 @@ import data_overlap
 
 text = "mario is the fastest"
 txt_list = text.split()
-txt_dic = {name:len(name) for (name, count) in txt_list}
+txt_dic = {name:len(name) for name in txt_list}
 print(txt_dic)
