@@ -12,6 +12,15 @@ import data_overlap
 # square_numbers.start()
 # data_overlap.start()
 
+
+
+
 temps = {"Monday": 12, "Tuesday": 18, "Wednesday": 9}
-temp_far = {day:(temp*9/5)+32 for (day, temp) in temps.items()}
-print(temp_far)
+for (day, temp) in temps.items():
+    print(f"{day} - {temp}")
+
+
+# temp_far = {day:(temp*9/5)+32 for (day, temp) in temps.items()}
+# print(temp_far)
+
+
