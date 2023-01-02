@@ -12,5 +12,5 @@ import nato_alphabet
 # list_comp.start()
 # square_numbers.start()
 # data_overlap.start()
-nato_alphabet.start()
+# nato_alphabet.start()
 
